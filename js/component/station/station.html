@@ -1,0 +1,29 @@
+<section ng-controller="StationController" id="dashboard-main-section">
+    <div class="row page-titles">
+        <div class="col-md-5 col-8 align-self-center">
+            <h3 class="text-themecolor">Station</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-7" ng-repeat="station in stations">
+            <div class="card" id="station-card">
+                <div style="height: 150px;" id="image-card"></div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap">
+                                <div>
+                                    <h3 class="card-title">Station {{station.station}}</h3>
+                                    <h6 class="card-subtitle">Lorem ipsum dolor sit.</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary" id="btn-view" ng-click="viewStation(station)">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
