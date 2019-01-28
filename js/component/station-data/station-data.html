@@ -1,0 +1,67 @@
+<section ng-controller="StationDataController" id="dashboard-main-section">
+    <div class="row page-titles">
+        <div class="col-md-5 col-8 align-self-center">
+            <h3 class="text-themecolor">Station {{station.station}}</h3>
+        </div>
+    </div>
+    <div class="row" id="station-card">
+        <div class="col-lg-4 col-md-4">
+            <div class="card" id="station-card-sub" ng-click="centralData()">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="amp-pxl" style="height: 100px;">
+                                <img src="../assets/images/icons8-mind-map-100 (1).png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <center>
+                                <h1>00</h1>
+                                <h4 class="station-card-title">Cental</h4>
+                            </center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="card" id="station-card-sub" ng-click="logoutData()">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="amp-pxl" style="height: 100px;">
+                                <img src="../assets/images/icons8-login-100.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <center>
+                                <h1>00</h1>
+                                <h4 class="station-card-title">Logout</h4>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="card" id="station-card-sub" ng-click="loginData()">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="amp-pxl" style="height: 100px;">
+                                <img src="../assets/images/icons8-logout-rounded-left-100.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <center>
+                                <h1>00</h1>
+                                <h4 class="station-card-title">Login</h4>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

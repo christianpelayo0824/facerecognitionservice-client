@@ -8,4 +8,8 @@ loginApp.controller('LoginController', function ($scope, $location, $window) {
         console.log("HIT");
         $window.location.href = "template/main.html";
     }
+
+    $scope.loginAdmin = function (data) {
+        console.log(data);
+    }
 });

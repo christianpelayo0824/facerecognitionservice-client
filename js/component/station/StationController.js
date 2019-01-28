@@ -1,11 +1,12 @@
-mainApp.controller('StationController', function ($scope, $location, StationService) {
+mainApp.controller('StationController', function ($scope, $rootScope, $location, EmployeeCareerProfileService) {
 
     $scope.viewStation = function (data) {
-        console.log(data);
+        $rootScope.station = data;
+        $location.path("/station-data")
     }
 
     getStation = function () {
-        StationService.getDistinctStation()
+        EmployeeCareerProfileService.getDistinctStation()
             .then(function (response) {
                 $scope.stations = {};
                 $scope.stations = response.data;

@@ -53,7 +53,7 @@ Global Styles
 }
 
 body {
-  background: #FAFAFA;
+  background: #EEEEEE;
   font-family: 'VarelaRound-Regular';
   margin: 0;
   overflow-x: hidden;
@@ -4872,4 +4872,37 @@ button.btn {
 
 #btn-view {
   width: 100%;
+}
+
+#data-table > thead > tr > th,
+#data-table > tbody > tr > td {
+  font-family: 'Montserrat-Regular';
+  font-size: 13px;
+
+}
+
+#station-card > .col-lg-4 > 
+.card > .card-block > 
+.row > .col-lg-6 > center >.station-card-title {
+  padding-top: 8px;
+  font-family: 'VarelaRound-Regular';
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #03A9F4;
+}
+
+#station-card > .col-lg-4 > 
+.card > .card-block > 
+.row > .col-lg-6> center > h1 {
+  padding-top: 12px;
+  font-family: 'VarelaRound-Regular';
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  color: #03A9F4;
+}
+
+#station-card-sub:hover {
+  border: 2px solid #03A9F4;
 }

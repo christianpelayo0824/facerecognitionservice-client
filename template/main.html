@@ -9,10 +9,12 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
     <title>Employee Monitoring Using Face Recognition</title>
+
+    <!-- Links -->
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <!-- <link href="../css/custom.css" rel="stylesheet"> -->
     <link href="../css/colors/blue.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/plugins/DataTables/datatables.min.css">
 </head>
 
 <body class="fix-header fix-sidebar card-no-border" ng-app="mainApp">
@@ -23,91 +25,76 @@
     <div id="main-wrapper">
         <header class="topbar">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#!/dashboard">
-                            <span>
-                                <!-- <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
-                                <h2 id="brand-title"> <img src="../assets/images/logo-light-icon.png" alt="homepage"
-                                        class="light-logo" />Employee Monitoring - Portal</h2>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="navbar-collapse">
-                        <!-- <ul class="navbar-nav mr-auto mt-md-0">
-                            <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark"
-                                    href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                            <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark"
-                                    href="javascript:void(0)"><i class="ti-search"></i></a>
-                                <form class="app-search">
-                                    <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i
-                                            class="ti-close"></i></a> </form>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav my-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg"
-                                        alt="user" class="profile-pic m-r-10" />Christian Pelayo</a>
-                            </li>
-                        </ul> -->
-                    </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#!/dashboard">
+                        <span>
+                            <!-- <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
+                            <h2 id="brand-title"> <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />Employee
+                                Monitoring - Portal</h2>
+                        </span>
+                    </a>
                 </div>
             </nav>
         </header>
-        <div class="container">
-            <aside class="left-sidebar">
-                <div class="scroll-sidebar">
-                    <nav class="sidebar-nav">
-                        <ul id="sidebarnav">
-                            <li> <a class="waves-effect waves-dark" href="#!/dashboard" aria-expanded="false"><img src="../assets/images/icons8-speed-23.png"
-                                        alt=""><span class="hide-menu">Dashboard</span></a>
-                            </li>
-                            <li> <a class="waves-effect waves-dark" href="#!/station" aria-expanded="false"><img src="../assets/images/icons8-server-23.png"
-                                        alt=""><span class="hide-menu">Station</span></a>
-                            </li>
-                            <li> <a class="waves-effect waves-dark" href="#!/profile" aria-expanded="false"><img src="../assets/images/icons8-customer-23.png"
-                                        alt=""><span class="hide-menu">Profile</span></a>
-                            </li>
-                            <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><img
-                                        src="../assets/images/icons8-source-code-23.png" alt=""><span class="hide-menu">Developers</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
-            <div class="page-wrapper">
-                <div class="container-fluid">
-                    <ng-view></ng-view>
-                </div>
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="#!/dashboard" aria-expanded="false"><img src="../assets/images/icons8-speed-23.png"
+                                    alt=""><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="#!/station" aria-expanded="false"><img src="../assets/images/icons8-server-23.png"
+                                    alt=""><span class="hide-menu">Station</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="#!/profile" aria-expanded="false"><img src="../assets/images/icons8-customer-23.png"
+                                    alt=""><span class="hide-menu">Profile</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><img src="../assets/images/icons8-source-code-23.png"
+                                    alt=""><span class="hide-menu">Developers</span></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <footer class="footer"> © 2019 Developed <a href="">Group 1</a></footer>
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <ng-view></ng-view>
+            </div>
         </div>
+        <footer class="footer"> © 2019 Developed <a href="">Group 1</a></footer>
     </div>
+
 
     <!-- Static Library -->
     <script src="../js/lib/angular.min.js"></script>
     <script src="../js/lib/angular-route.min.js"></script>
     <script src="../js/app.js"></script>
 
-    <!-- Controller  -->
-    <script src="../js/component/dashboard/DashboardController.js"></script>
-    <script src="../js/component/station/StationController.js"></script>
-    <script src="../js/component/profile/ProfileController.js"></script>
-
-    <!-- Service -->
-    <script src="../js/service/StationService.js"></script>
-
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/DataTables/datatables.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/tether.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/custom/jquery.slimscroll.js"></script>
     <script src="../js/custom/sidebarmenu.js"></script>
     <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="../js/custom/custom.js"></script>
-    <script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="../assets/plugins/d3/d3.min.js"></script>
-    <script src="../assets/plugins/c3-master/c3.min.js"></script>
+
+    <!-- Controller  -->
+    <script src="../js/component/dashboard/DashboardController.js"></script>
+    <script src="../js/component/station/StationController.js"></script>
+    <script src="../js/component/profile/ProfileController.js"></script>
+    <script src="../js/component/station-data/StationDataController.js"></script>
+    <script src="../js/component/station-data-central/StationDataCentralController.js"></script>
+    <script src="../js/component/station-data-logout/StationDataLogoutController.js"></script>
+    <script src="../js/component/station-data-login/StationDataLoginController.js"></script>
+
+
+    <!-- Service -->
+    <script src="../js/service/EmployeeCareerProfileService.js"></script>
+    <script src="../js/service/EmployeeLoginService.js"></script>
+
+
+
 </body>
 
 </html>

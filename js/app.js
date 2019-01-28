@@ -23,6 +23,22 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '../js/component/login/login.html',
             controller: 'LoginController'
         }).
+        when('/station-data', {
+            templateUrl: '../js/component/station-data/station-data.html',
+            controller: 'StationDataController'
+        }).
+        when('/station-data-central', {
+            templateUrl: '../js/component/station-data-central/station-data-central.html',
+            controller: 'StationDataCentralController'
+        }).
+        when('/station-data-logout', {
+            templateUrl: '../js/component/station-data-logout/station-data-logout.html',
+            controller: 'StationDataLogoutController'
+        }).
+        when('/station-data-login', {
+            templateUrl: '../js/component/station-data-login/station-data-login.html',
+            controller: 'StationDataLoginController'
+        }).
         otherwise({
             redirectTo: '/dashboard'
         });

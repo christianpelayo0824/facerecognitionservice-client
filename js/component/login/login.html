@@ -46,21 +46,21 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" >
+                    <div class="modal-body">
                         <label for="#firstname">Firstname</label>
-                        <input type="text" class="form-control" id="firstname">
+                        <input type="text" class="form-control" id="firstname" ng-model="admin.firstname">
                         <label for="#lastname">Lastname</label>
-                        <input type="text" class="form-control" id="lastname">
+                        <input type="text" class="form-control" id="lastname" ng-model="admin.lastname">
                         <label for="#email">Email</label>
-                        <input type="text" class="form-control" id="email">
+                        <input type="text" class="form-control" id="email" ng-model="admin.email">
                         <label for="#username">Username</label>
-                        <input type="test" class="form-control" id="username">
+                        <input type="test" class="form-control" id="username" ng-model="admin.username">
                         <label for="#password">Password</label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" class="form-control" id="password" ng-model="admin.password">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Sign up</button>
+                        <button type="button" class="btn btn-primary" ng-click="loginAdmin(admin)">Sign up</button>
                     </div>
                 </div>
             </div>

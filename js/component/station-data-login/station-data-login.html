@@ -1,0 +1,55 @@
+<section ng-controller="StationDataLoginController" id="dashboard-main-section">
+    <div class="row page-titles">
+        <div class="col-md-5 col-8 align-self-center">
+            <h3 class="text-themecolor">Station {{station.station}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <!-- column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">Login Table</h4>
+                    <div class="table-responsive">
+                        <table class="table" id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Department</th>
+                                    <th>Position</th>
+                                    <th>Station</th>
+                                    <th>Date | Time</th>
+                                </tr>
+                            </thead>
+                            <!-- <tbody>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Department</th>
+                                    <th>Position</th>
+                                    <th>Station</th>
+                                    <th>Date | Time</th>
+                                </tr>
+                            </tbody> -->
+                            <tbody ng-repeat="empCareer in employeeCareer">
+                                <tr>
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{empCareer.empCareerProfile.employee.firstname}}</td>
+                                    <td>{{empCareer.empCareerProfile.employee.lastname}}</td>
+                                    <td>{{empCareer.empCareerProfile.department}}</td>
+                                    <td>{{empCareer.empCareerProfile.position}}</td>
+                                    <td>{{empCareer.empCareerProfile.station}}</td>
+                                    <td>{{empCareer.dateTime | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                                  
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
