@@ -10,6 +10,17 @@
             <div class="card">
                 <div class="card-block">
                     <h4 class="card-title">Login Table</h4>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-8">
+                            <button class="btn btn-primary" ng-click="exportPdf()">Export PDF</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <form id="search-form">
+                                <input type="text" class="form-control" id="search" ng-model="filter" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <br>
                     <div class="table-responsive">
                         <table class="table" id="data-table">
                             <thead>
@@ -23,7 +34,7 @@
                                     <th>Date | Time</th>
                                 </tr>
                             </thead>
-                            <tbody ng-repeat="empCareer in employeeCareer">
+                            <tbody ng-repeat="empCareer in employeeCareer | filter : filter">
                                 <tr>
                                     <td>{{$index + 1}}</td>
                                     <td>{{empCareer.empCareerProfile.employee.firstname}}</td>
@@ -31,7 +42,7 @@
                                     <td>{{empCareer.empCareerProfile.department}}</td>
                                     <td>{{empCareer.empCareerProfile.position}}</td>
                                     <td>{{empCareer.empCareerProfile.station}}</td>
-                                    <td>{{empCareer.dateTime | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                                    <td>{{empCareer.dateTime | date:"MMMM-dd-yyyy | h:mma"}}</td>
                                 </tr>
                             </tbody>
                         </table>

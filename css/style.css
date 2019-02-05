@@ -4906,3 +4906,9 @@ button.btn {
 #station-card-sub:hover {
   border: 2px solid #03A9F4;
 }
+
+#search-form > input{
+  font-family: 'Montserrat-Regular';
+  font-size: 12px;
+  float: left
+}
