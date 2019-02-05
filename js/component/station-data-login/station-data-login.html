@@ -23,17 +23,6 @@
                                     <th>Date | Time</th>
                                 </tr>
                             </thead>
-                            <!-- <tbody>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Department</th>
-                                    <th>Position</th>
-                                    <th>Station</th>
-                                    <th>Date | Time</th>
-                                </tr>
-                            </tbody> -->
                             <tbody ng-repeat="empCareer in employeeCareer">
                                 <tr>
                                     <td>{{$index + 1}}</td>
@@ -43,7 +32,6 @@
                                     <td>{{empCareer.empCareerProfile.position}}</td>
                                     <td>{{empCareer.empCareerProfile.station}}</td>
                                     <td>{{empCareer.dateTime | date:"MM/dd/yyyy 'at' h:mma"}}</td>
-                                  
                                 </tr>
                             </tbody>
                         </table>

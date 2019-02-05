@@ -6,9 +6,9 @@ mainApp.controller("StationDataLoginController", function ($scope, $rootScope, E
             .then(function (response) {
                 $scope.employeeCareer = response.data;
                 console.log(response)
-                $(document).ready(function () {
-                    $('#data-table').DataTable();
-                });
+                // $(document).ready(function () {
+                //     $('#data-table').DataTable();
+                // });
             }).catch(function (e) {
                 console.log("Error: " + e);
             })
