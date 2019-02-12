@@ -5,7 +5,6 @@ mainApp.controller("StationDataLogoutController", function ($scope, $rootScope, 
         if (station == undefined) {
             console.log("HIT")
         } else {
-
             EmployeeCareerProfileService.getCareerProfileByStation(station)
                 .then(function (response) {
                     console.log();

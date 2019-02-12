@@ -4,8 +4,6 @@
             <h3 class="text-themecolor">Station {{station.station}}</h3>
         </div>
     </div>
-    <button class="btn btn-primary" ng-click="test()">Test</button>
-    <br>
     <br>
     <div class="row">
         <!-- column -->
@@ -13,6 +11,25 @@
             <div class="card">
                 <div class="card-block">
                     <h4 class="card-title">Central Table</h4>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-8">
+                            <button class="btn btn-warning" ng-click="exportPdf()" id="table-button">Export PDF</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <form id="search-form">
+                                <input type="text" class="form-control" id="search" ng-model="filter" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter"
+                                id="table-button" ng-click="getAllCareerProfile()">
+                                Add Employee
+                            </button>
+                        </div>
+                    </div>
+                    <br>
                     <div class="table-responsive">
                         <table class="table" id="data-table">
                             <thead>
@@ -25,19 +42,67 @@
                                     <th>Operation</th>
                                 </tr>
                             </thead>
-                            <tbody ng-repeat="empCareer in employeeCareer">
+                            <tbody ng-repeat="empCareer in employeeCareer | filter : filter">
                                 <tr>
-                                    <td>{{empCareer.id}}</td>
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{empCareer.empCareerProfile.employee.firstname}}</td>
+                                    <td>{{empCareer.empCareerProfile.employee.lastname}}</td>
+                                    <td>{{empCareer.empCareerProfile.department}}</td>
+                                    <td>{{empCareer.empCareerProfile.position}}</td>
+                                    <td><button class="btn btn-warning" ng-click="deleteEmployeeFromStation(empCareer.empCareerProfile)">Delete</button></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document" id="myModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="search-form">
+                        <input type="text" class="form-control" id="search" ng-model="filter" placeholder="Employee ID">
+                        <br>
+                    </form>
+                    <br>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table" id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Department</th>
+                                    <th>Position</th>
+                                    <th>Operation</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="empCareer in employeeCareerProfile | filter : filter">
+                                <tr>
+                                    <td>{{empCareer.employee_id}}</td>
                                     <td>{{empCareer.employee.firstname}}</td>
                                     <td>{{empCareer.employee.lastname}}</td>
                                     <td>{{empCareer.department}}</td>
                                     <td>{{empCareer.position}}</td>
-                                    <td><button class="btn btn-primary">Update</button> |
-                                        <button class="btn btn-primary">Delete</button></td>
+                                    <td><button class="btn btn-success" ng-click="saveStation(empCareer)">Add</button></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

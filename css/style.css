@@ -4912,3 +4912,11 @@ button.btn {
   font-size: 12px;
   float: left
 }
+
+#table-button {
+  width: 150px;
+}
+
+#myModal {
+  width: 70% !important;
+}

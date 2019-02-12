@@ -24,7 +24,7 @@
                             </thead>
                             <tbody ng-repeat="empCareer in employeeCareer">
                                 <tr>
-                                    <td>{{empCareer.id}}</td>
+                                    <td>{{$index + 1}}</td>
                                     <td>{{empCareer.employee.firstname}}</td>
                                     <td>{{empCareer.employee.lastname}}</td>
                                     <td>{{empCareer.department}}</td>
