@@ -2,9 +2,6 @@ mainApp.service("EmployeeLoginService", function ($http) {
 
     var BASE_LINK = "http://192.168.254.100:8080/api/resource/loginEmployee";
 
-    //Localhost
-    // var BASE_LINK = "http://192.168.254.100:8080/api/resource/loginEmployee";
-
     this.getAllLoginEmployee = function () {
         return $http({
             method: "GET",

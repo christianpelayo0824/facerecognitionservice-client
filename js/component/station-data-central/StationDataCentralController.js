@@ -30,7 +30,7 @@ mainApp.controller("StationDataCentralController", function ($scope, $rootScope,
                     $location.path('/station-data');
                     swal({
                         title: "Good job!",
-                        text: "You clicked the button!",
+                        text: "Employee add succesfully!",
                         icon: "success",
                         button: "Aww yiss!",
                     });

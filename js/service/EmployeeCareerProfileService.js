@@ -1,8 +1,5 @@
 mainApp.service("EmployeeCareerProfileService", ["$http", function ($http) {
 
-    // var BASE_LINK = "http://192.168.254.101:8080/api/resource/career";
-
-    //Localhost
     var BASE_LINK = "http://192.168.254.100:8080/api/resource/career";
 
     this.getDistinctStation = function () {

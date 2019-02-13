@@ -4907,7 +4907,14 @@ button.btn {
   border: 2px solid #03A9F4;
 }
 
-#search-form > input{
+#search-form > input,
+#search-form > textarea,
+#search-form > label,
+#search-form > .row > .col-lg-6 > input,
+#search-form > .row > .col-lg-6 > label,
+#search-form > div > label,
+#search-form > div > input,
+#search-form > div >textarea{
   font-family: 'Montserrat-Regular';
   font-size: 12px;
   float: left
