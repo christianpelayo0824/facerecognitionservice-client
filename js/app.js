@@ -3,10 +3,10 @@ var mainApp = angular.module('mainApp', ['ngRoute'])
 mainApp.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.
-        when('/dashboard', {
-            templateUrl: '../js/component/dashboard/dashboard.html',
-            controller: 'DashboardController'
-        }).
+        // when('/dashboard', {
+        //     templateUrl: '../js/component/dashboard/dashboard.html',
+        //     controller: 'DashboardController'
+        // }).
         when('/station', {
             templateUrl: '../js/component/station/station.html',
             controller: 'StationController'
@@ -39,8 +39,11 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '../js/component/station-data-login/station-data-login.html',
             controller: 'StationDataLoginController'
         }).
+        when('/developer', {
+            templateUrl: '../js/component/developer/developer.html'
+        }).
         otherwise({
-            redirectTo: '/dashboard'
+            redirectTo: '/station'
         });
 }]);
 

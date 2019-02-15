@@ -1,7 +1,7 @@
 <section ng-controller="StationDataController" id="dashboard-main-section">
     <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor">Station {{station.station}}</h3>
+            <h3 class="text-themecolor" id="station-label">Station {{station.station}}</h3>
         </div>
     </div>
     <div class="row" id="station-card">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-lg-6">
                             <center>
-                                <h1>00</h1>
+                                <h1>{{noOfCentralData}}</h1>
                                 <h4 class="station-card-title">Cental</h4>
                             </center>
 
@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-lg-6">
                             <center>
-                                <h1>00</h1>
+                                <h1>{{noOfLogoutData}}</h1>
                                 <h4 class="station-card-title">Logout</h4>
                             </center>
                         </div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-lg-6">
                             <center>
-                                <h1>00</h1>
+                                <h1>{{noOfLoginData}}</h1>
                                 <h4 class="station-card-title">Login</h4>
                             </center>
                         </div>

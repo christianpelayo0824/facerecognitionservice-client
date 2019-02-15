@@ -89,7 +89,7 @@
                         </div>
                         <div>
                             <label for="#dateTime">Date-Time</label>
-                            <input type="text" class="form-control" id="dateTime" ng-model="reason.localDateTime" readonly>
+                            <input type="text" class="form-control" id="dateTime" ng-model="reason.localDateTime | date:'MMMM-dd-yyyy | h:mma'" readonly>
                         </div>
                         <div>
                             <label for="#reason">Reason</label>

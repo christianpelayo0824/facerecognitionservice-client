@@ -1,6 +1,6 @@
 mainApp.service("EmployeeLoginService", function ($http) {
 
-    var BASE_LINK = "http://192.168.254.100:8080/api/resource/loginEmployee";
+    var BASE_LINK = "http://localhost:8080/api/resource/loginEmployee";
 
     this.getAllLoginEmployee = function () {
         return $http({
@@ -13,6 +13,13 @@ mainApp.service("EmployeeLoginService", function ($http) {
         return $http({
             method: "GET",
             url: BASE_LINK + "/getLoginEmployeeByStation/" + physicalStatoion
+        })
+    }
+
+    this.countAllLoginEmployeeByStation = function (station) {
+        return $http({
+            method: "GET",
+            url: BASE_LINK + "/countAllLoginEmployeeByStation/" + station
         })
     }
 })

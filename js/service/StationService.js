@@ -1,9 +1,6 @@
 mainApp.service("StationService", function ($http, $rootScope) {
 
-    // var BASE_LINK = "http://192.168.254.100:8080/api/resource/loginEmployee";
-
-    //Localhost
-    var BASE_LINK = "http://192.168.254.100:8080/api/resource/station";
+    var BASE_LINK = "http://localhost:8080/api/resource/station";
 
 
     this.deleteEmployeeFromStation = function(employeeId, station) {

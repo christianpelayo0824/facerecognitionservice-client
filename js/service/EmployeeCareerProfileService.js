@@ -1,6 +1,6 @@
 mainApp.service("EmployeeCareerProfileService", ["$http", function ($http) {
 
-    var BASE_LINK = "http://192.168.254.100:8080/api/resource/career";
+    var BASE_LINK = "http://localhost:8080/api/resource/career";
 
     this.getDistinctStation = function () {
         return $http({
@@ -16,10 +16,18 @@ mainApp.service("EmployeeCareerProfileService", ["$http", function ($http) {
         })
     }
 
-    this.getAllCareerProfile = function() {
+    this.getAllCareerProfile = function () {
         return $http({
             method: "GET",
-            url: BASE_LINK + "/getAllCareerProfile" 
+            url: BASE_LINK + "/getAllCareerProfile"
+        })
+
+    }
+
+    this.countAllEmployee = function (station) {
+        return $http({
+            method: "GET",
+            url: BASE_LINK + "/countAllEmployee/" + station 
         })
 
     }
